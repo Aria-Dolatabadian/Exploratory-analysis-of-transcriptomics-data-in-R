@@ -506,6 +506,12 @@ trans_cts_cluster %>%
   facet_grid(rows = vars(strain), cols = vars(cluster))
 
 
+
+#if (!require("BiocManager", quietly = TRUE))
+#    install.packages("BiocManager")
+#BiocManager::install("ComplexHeatmap")
+
+
 library(ComplexHeatmap)
 Heatmap(hclust_matrix, show_row_names = FALSE)
 
